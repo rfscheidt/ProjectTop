@@ -2,14 +2,13 @@ package br.com.animati.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Paciente {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+	@GeneratedValue// (strategy = GenerationType.AUTO)
 	private long idPaciente;
 	
 	private String empresa;

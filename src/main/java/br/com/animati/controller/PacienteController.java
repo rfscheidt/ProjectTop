@@ -21,28 +21,28 @@ public class PacienteController {
 	@Autowired
 	private PacienteService pacienteService;
 	
-	@RequestMapping("/paciente")
+	@RequestMapping("/pacientes")
 	public List<Paciente> list() {
 		return pacienteService.list();
 	}
 	
-	@PostMapping("/paciente")
+	@PostMapping("/pacientes")
 	public void save(@RequestBody Paciente p) {
 		pacienteService.add(p);
 	}
 	
-	@RequestMapping("/paciente/{idPaciente}")
+	@RequestMapping("/pacientes/{idPaciente}")
 	public Paciente findById(@PathVariable long idPaciente) {
 		return pacienteService.findById(idPaciente).get();
 	}
 	
-	@DeleteMapping("/paciente/{idPaciente}")
+	@DeleteMapping("/pacientes/{idPaciente}")
 	public void delete(@PathVariable long idPaciente) {
 		Paciente paciente = pacienteService.findById(idPaciente).get();
 		pacienteService.delete(paciente);
 	}
 	
-	@PutMapping("/paciente/{idPaciente}")
+	@PutMapping("/pacientes/{idPaciente}")
 	public void update(@PathVariable long idPaciente, @RequestBody Paciente newPaciente) {
 		Optional<Paciente> oldPaciente = pacienteService.findById(idPaciente);
 		if (oldPaciente.isPresent()) {
