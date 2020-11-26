@@ -35,4 +35,9 @@ public class AtendimentoServiceImpl implements AtendimentoService {
 		return dao.findById(idAtendimento);
 	}
 
+	@Override
+	public void deleteById(Long idAtendimento) {
+		dao.deleteById(idAtendimento);
+	}
+
 }

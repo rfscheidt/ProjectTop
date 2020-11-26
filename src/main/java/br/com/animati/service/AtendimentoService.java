@@ -7,12 +7,14 @@ import br.com.animati.entity.Atendimento;
 
 public interface AtendimentoService {
 	
-	public void add(Atendimento atendimento);
+	void add(Atendimento atendimento);
 	
-	public List<Atendimento> list();
+	List<Atendimento> list();
 	
-	public void delete(Atendimento atendimento);
+	void delete(Atendimento atendimento);
 	
-	public Optional<Atendimento> findById(long idAtendimento);
+	Optional<Atendimento> findById(long idAtendimento);
+
+	void deleteById(Long idAtendimento);
 
 }

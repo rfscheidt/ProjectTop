@@ -38,8 +38,7 @@ public class PacienteController {
 	
 	@DeleteMapping("/pacientes/{idPaciente}")
 	public void delete(@PathVariable long idPaciente) {
-		Paciente paciente = pacienteService.findById(idPaciente).get();
-		pacienteService.delete(paciente);
+		pacienteService.deleteById(idPaciente);
 	}
 	
 	@PutMapping("/pacientes/{idPaciente}")

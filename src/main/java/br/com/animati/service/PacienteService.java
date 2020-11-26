@@ -7,12 +7,14 @@ import br.com.animati.entity.Paciente;
 
 public interface PacienteService {
 	
-	public void add(Paciente p);
+	void add(Paciente p);
 	
-	public List<Paciente> list();
+	List<Paciente> list();
+
+	void delete(Paciente paciente);
 	
-	public void delete(Paciente paciente);
-	
-	public Optional<Paciente> findById(long idPaciente);
+	Optional<Paciente> findById(long idPaciente);
+
+	void deleteById(Long idPaciente);
 	
 }
