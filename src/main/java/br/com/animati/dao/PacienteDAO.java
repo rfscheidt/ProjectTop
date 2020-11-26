@@ -8,4 +8,6 @@ import br.com.animati.entity.Paciente;
 @Repository
 public interface PacienteDAO extends JpaRepository<Paciente, Long>{
 
+
+
 }

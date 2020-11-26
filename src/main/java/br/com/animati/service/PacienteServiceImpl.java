@@ -33,5 +33,10 @@ public class PacienteServiceImpl implements PacienteService {
 	public Optional<Paciente> findById(long idPaciente) {
 		return dao.findById(idPaciente);
 	}
-	
+
+	@Override
+	public void deleteById(Long idPaciente) {
+		dao.deleteById(idPaciente);
+	}
+
 }
