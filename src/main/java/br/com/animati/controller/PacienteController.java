@@ -47,6 +47,8 @@ public class PacienteController {
 		if (oldPaciente.isPresent()) {
 			Paciente paciente = oldPaciente.get();
 			paciente.setNome(newPaciente.getNome());
+			paciente.setNomeSocial(newPaciente.getNomeSocial());
+			paciente.setCpf(newPaciente.getCpf());
 			
 			pacienteService.add(paciente);
 		}
