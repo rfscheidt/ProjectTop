@@ -17,7 +17,7 @@ import br.com.animati.service.PacienteService;
 
 @RestController
 public class PacienteController {
-	//https://www.treinaweb.com.br/blog/criando-uma-api-rest-com-o-spring-boot/
+	
 	@Autowired
 	private PacienteService pacienteService;
 	
